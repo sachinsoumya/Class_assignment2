@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/ac30b03249.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>Survey Form</header>
+    <div class="main">
+      <label for="name" value="name">Name</label><br />
+      <div class="input">
+        <div>
+          <input type="text" name="fname" id="name" required />
+          <p>First</p>
+        </div>
+        <div class="last">
+          <input type="text" name="lname" id="name" required />
+          <p>Last</p>
+        </div>
+      </div>
+      <label for="email" value="email">Email</label><br />
+      <input type="email" id="email" name="email" required />
+      <h4>Your Experience</h4>
+      <div id="str">
+        <i class="far fa-star" onclick="sun(1)"></i>
+        <i class="far fa-star" onclick="sun(2)"></i>
+        <i class="far fa-star" onclick="sun(3)"></i>
+        <i class="far fa-star" onclick="sun(4)"></i>
+        <i class="far fa-star" onclick="sun(5)"></i>
+      </div>
+      <p>Overall,how would you rate your experience with us</p>
+      <h3>How satisfied are you with</h3>
+      <table>
+        <tr>
+          <td></td>
+          <td>Very Unsatisfied</td>
+          <td>Unsatisfied</td>
+          <td>Neutral</td>
+          <td>Very satisfied</td>
+        </tr>
+        <tr class="row1">
+          <td>Purchase</td>
+          <td><input type="radio" name="purchase" value="very satisfied" /></td>
+          <td><input type="radio" name="purchase" value="very satisfied" /></td>
+          <td><input type="radio" name="purchase" value="very satisfied" /></td>
+          <td><input type="radio" name="purchase" value="very satisfied" /></td>
+        </tr>
+        <tr class="row11">
+          <td>Service</td>
+          <td><input type="radio" name="purchase" value="Unsatisfied"</td>
+          <td><input type="radio" name="purchase" value="Unsatisfied"</td>
+          <td><input type="radio" name="purchase" value="Unsatisfied"</td>
+          <td><input type="radio" name="purchase" value="Unsatisfied"</td>
+        </tr>
+        <tr class="row1">
+          <td>Company Overall</td>
+          <td><input type="radio" name="purchase" value="Neutral"</td>
+          <td><input type="radio" name="purchase" value="Neutral"</td>
+          <td><input type="radio" name="purchase" value="Neutral" td /></td>
+          <td><input type="radio" name="purchase" value="Neutral"</td>
+        </tr>
+      </table>
+      <h3>How likely are you too</h3>
+      <table>
+        <tr>
+          <td></td>
+          <td>Very Unsatisfied</td>
+          <td>Unsatisfied</td>
+          <td>Neutral</td>
+          <td>Very satisfied</td>
+        </tr>
+        <tr class="row1">
+          <td>By from us again</td>
+          <td><input type="radio" name="purchase" value="very satisfied" /></td>
+          <td><input type="radio" name="purchase" value="very satisfied" /></td>
+          <td><input type="radio" name="purchase" value="very satisfied" /></td>
+          <td><input type="radio" name="purchase" value="very satisfied" /></td>
+        </tr>
+        <tr class="row11">
+          <td>Recommend our<br />products to others</td>
+          <td><input type="radio" name="purchase" value="Unsatisfied"</td>
+          <td><input type="radio" name="purchase" value="Unsatisfied"</td>
+          <td><input type="radio" name="purchase" value="Unsatisfied"</td>
+          <td><input type="radio" name="purchase" value="Unsatisfied"</td>
+        </tr>
+        <tr class="row1">
+          <td>Recommend our<br />Company to others</td>
+          <td><input type="radio" name="purchase" value="Neutral"</td>
+          <td><input type="radio" name="purchase" value="Neutral"</td>
+          <td><input type="radio" name="purchase" value="Neutral" td /></td>
+          <td><input type="radio" name="purchase" value="Neutral"</td>
+        </tr>
+      </table>
+      <h3>Additional comments and suggestions</h3>
+      <textarea></textarea>
+      <!-- <div id="str">
+        <i class="far fa-star" onclick="sun(1)"></i>
+        <i class="far fa-star" onclick="sun(2)"></i>
+        <i class="far fa-star" onclick="sun(3)"></i>
+        <i class="far fa-star" onclick="this.className =='far fa-star'?sun(4):this.className='far fa-star'"></i>
+       </div> -->
+    </div>
+    <script>
+      function sun(s) {
+        document.getElementById("str").innerHTML = fun(s);
+        if (5 - s == 1) {
+          document.getElementById("str").innerHTML = `${
+            document.getElementById("str").innerHTML
+          } <i class='far fa-star'></i>`;
+        } else if (5 - s == 2) {
+          document.getElementById("str").innerHTML = `${
+            document.getElementById("str").innerHTML
+          } <i class='far fa-star'></i> <i class='far fa-star'></i>`;
+        } else if (5 - s == 3) {
+          document.getElementById("str").innerHTML = `${
+            document.getElementById("str").innerHTML
+          } <i class='far fa-star'></i> <i class='far fa-star'></i><i class='far fa-star'></i>`;
+        } else if (5 - s == 4) {
+          document.getElementById("str").innerHTML = `${
+            document.getElementById("str").innerHTML
+          } <i class='far fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i> <i class='far fa-star'></i> `;
+        } else {
+          document.getElementById(
+            "str"
+          ).innerHTML = `<i class='far fa-star'></i> <i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i> `;
+        }
+      }
+
+      function fun(n) {
+        if (n == 1) {
+          return `<i class='fas fa-star'>`;
+        }
+        return `<i class='fas fa-star'></i> ${fun(n - 1)} `;
+      }
+    </script>
+  </body>
+</html>

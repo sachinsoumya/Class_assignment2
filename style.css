@@ -1,0 +1,53 @@
+header{
+    font:normal normal small-caps 50px  'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+div.main{
+    margin:20px;
+
+}
+.input {
+display: flex;
+flex-wrap: wrap;
+}
+.last {
+margin-left: 40px;
+}
+input[type="text"] {
+height: 25px;
+width: 250px;
+}
+input[type="email"] {
+height: 25px;
+width: 550px;
+}
+table {
+width: 100%;
+}
+table,tr,td {
+border: 0px solid grey;
+border-collapse: collapse;
+
+}
+.row1 {
+background-color: lightgrey;
+height: 40px;
+font-size: 20px;
+text-align: left;
+
+}
+.row11 {
+background-color: whitesmoke;
+height: 40px;
+font-size: 20px;
+text-align: left;
+
+}
+textarea{
+width:100%;
+height:80px;
+}
+i{
+cursor: pointer;
+}
